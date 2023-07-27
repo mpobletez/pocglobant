@@ -23,7 +23,7 @@ def verify(username,password):
           return False 
      return USER_DATA.get(username)==password
 
-app.config['SQLALCHEMY_DATABASE_URI']='mssql+pyodbc://viewAPIUser:V13w_API_Us3r!@azdadevsql03.database.windows.net/am-da-sdb-view_migr-dq?driver=ODBC Driver 17 for SQL Server'
+app.config['SQLALCHEMY_DATABASE_URI']='mssql+pyodbc://USER:PASS@SERVER/DB?driver=ODBC Driver 17 for SQL Server'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False;
 
 db=SQLAlchemy(app)
