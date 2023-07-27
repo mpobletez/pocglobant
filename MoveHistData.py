@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 import pyodbc
 import json
 
-engine = create_engine(f'mssql+pyodbc://viewAPIUser:V13w_API_Us3r!@azdadevsql03.database.windows.net/am-da-sdb-view_migr-dq?driver=ODBC Driver 17 for SQL Server')
+engine = create_engine(f'mssql+pyodbc://USER:PASS@SERVER/DB?driver=ODBC Driver 17 for SQL Server')
 
 columns = ['id','department']
 df = pd.read_csv('departments.csv', header=None, names=columns)
