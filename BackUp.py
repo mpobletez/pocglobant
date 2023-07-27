@@ -7,7 +7,7 @@ import avro.schema
 from avro.datafile import DataFileReader, DataFileWriter
 from avro.io import DatumReader, DatumWriter
 
-engine = create_engine(f'mssql+pyodbc://viewAPIUser:V13w_API_Us3r!@azdadevsql03.database.windows.net/am-da-sdb-view_migr-dq?driver=ODBC Driver 17 for SQL Server')
+engine = create_engine(f'mssql+pyodbc://USER:PASS@SERVER/DB?driver=ODBC Driver 17 for SQL Server')
 
 df = pd.read_sql('select * from departments',engine)
 
